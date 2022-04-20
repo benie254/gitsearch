@@ -1,1 +1,24 @@
-<p>repo works!</p>
+<div class="container">
+    <div class="row" style="margin-left: 15%;">
+        <div class="col-md-4" style="margin: 0.5%;" *ngFor="let item of arrayData">
+            <div class="card" [ngClass]="{ 'bg-warning': item.form == true, 'bg-white': item.form !== true }">   
+                <!-- <img src="{{ GitService.item.avatar_url }}" width="130" class="avatar mb-2"> -->
+                
+                <div class="card-body">
+                    <a href="{{item.html_url}}" target="_blank"> 
+                        <h5 class="card-title"> Name: {{ item.name | truncate:[25] }} </h5> 
+                    </a>
+                    <h6 class="card-subtitle mb-2 text-muted"> Language {{ item.language }}, Size: {{item.size}} </h6>
+                    <p class="card-text"> Description: {{ item.description }} </p>
+                    <ul class="list-inline Left">
+                        <li class="list-inline-item" style="font-size:small;"> <em> Created on: {{item.created_at| truncate:[10]}} </em> </li> 
+                        <li class="list-inline-item" style="font-size:small;"> <em> Updated on: {{item.updated_at| truncate: [10] }} </em> </li> <br>
+                        <li class="list-inline-item"> Forks: {{item.forks_count}} </li>
+                        <li class="list-inline-item"> Watching: {{ item.watchers_count }} </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
