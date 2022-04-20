@@ -10,6 +10,7 @@ import { RepoComponent } from './repo/repo.component';
 import { UserComponent } from './user/user.component';
 import { SocialComponent } from './social/social.component';
 import { TruncatePipe } from './truncate-pipe/truncate.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TruncatePipe } from './truncate-pipe/truncate.pipe';
     RepoComponent,
     UserComponent,
     SocialComponent,
-    TruncatePipe
+    TruncatePipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
