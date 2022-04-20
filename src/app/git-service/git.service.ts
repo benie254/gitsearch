@@ -12,5 +12,7 @@ import { User } from '../user-class/user';
 })
 export class GitService {
 
-  constructor() { }
+  baseURL= environment.baseURL;
+
+  constructor(private http: HttpClient) { }
 }
