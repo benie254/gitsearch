@@ -22,4 +22,15 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onKey(event: any){
+    this.values= event.target.value;
+    this.getFetchSuccess= false;
+    this.NoUser= false;
+    if (this.values == ''){
+      this.noInput = true;
+    } else {
+      this.noInput = false;
+    }
+  }
+
 }
