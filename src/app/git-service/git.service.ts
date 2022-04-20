@@ -15,4 +15,8 @@ export class GitService {
   baseURL= environment.baseURL;
 
   constructor(private http: HttpClient) { }
+
+  gitRepos(userName: string): Observable<Repo[]>{
+    return this.http.get<Repo[]>(this.baseURL + '/users/' + userName + '/repos');
+  }
 }
