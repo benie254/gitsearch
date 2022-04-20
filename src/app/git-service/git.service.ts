@@ -11,7 +11,7 @@ import { Repo } from '../repo-class/repo';
 })
 export class GitService {
 
-  baseURL= environment.baseURL;
+  baseURL:string= 'https://api.github.com';
 
   constructor(private http: HttpClient) { }
 

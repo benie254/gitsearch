@@ -11,7 +11,7 @@ import { User } from '../user-class/user';
 })
 export class ProfileRequestService {
 
-  fromURL= environment.fromURL;
+  fromURL:string= 'https://api.github.com';
 
   constructor(private http: HttpClient) { }
 
