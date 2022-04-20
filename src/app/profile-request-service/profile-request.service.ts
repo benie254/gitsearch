@@ -11,5 +11,5 @@ import { User } from '../repo-class/repo';
 })
 export class ProfileRequestService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }
