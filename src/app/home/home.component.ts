@@ -42,6 +42,21 @@ export class HomeComponent implements OnInit {
     return promise;
   }
 
+  gitUser(event: any){
+    let promise= new Promise((resolve, reject) =>{
+      this.profileRequest.gitUser(this.userName).toPromise().then(response =>{
+        this.user= response;
+        // this.user.bio= response.bio;
+	      // this.user.avatar_url=response.avatar_url;
+        resolve('');
+      },
+      err =>{
+        this.errorMessage= 'An error was encountered';
+      });
+    });
+    return promise;
+  }
+
   ngOnInit(): void {
   }
 
