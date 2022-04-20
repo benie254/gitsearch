@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { GitService } from '../git-service/git.service';
+
 import { Repo } from '../repo-class/repo';
 
 @Component({
