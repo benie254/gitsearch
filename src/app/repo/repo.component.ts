@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { HttpClient } from '@angular/common/http';
+import { GitService } from '../git-service/git.service';
+
 @Component({
   selector: 'app-repo',
   templateUrl: './repo.component.html',
