@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
   errorMessage;
 
-  constructor() { }
+  constructor(private gitService: GitService,private profileRequest: ProfileRequestService) { }
 
   ngOnInit(): void {
   }
