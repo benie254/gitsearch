@@ -33,4 +33,24 @@ export class UserComponent implements OnInit {
     }
   }
 
+  search(userName: string): void{
+    this.getFetchSuccess= false;
+    this.NoUser= false;
+    userName= this.values.trim();
+    if (!userName) { return; }
+    this.gitService.gitRepos(userName);
+    this.isLoading= true;
+    this.fetchUser(userName);
+  }
+
+  fetchUser(UserName): void{
+    this.gitService.gitRepos(UserName).subscribe( data =>{
+      this.myUser= data;
+      if (this.myUser == undefined || this.myUser && this.myUser.length == 0){
+        this.NoUser= true;
+      } else {
+        this.NoUser= false;
+      };
+    });
+
 }
