@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -16,6 +16,12 @@ export class RepoComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(changes: SimpleChanges){
+    if (changes['passData']){
+      this.arrayData= this.passData;
+    }
   }
 
 }
