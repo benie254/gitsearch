@@ -6,7 +6,7 @@
     <div class="container" style="margin-top:2%;">
         <div class="input-group mb-3 col-xs-12 col-md-4">
             <button class="btn btn-primary" style="padding:0.5%;margin-left:37%;">
-                <input class="form-control" type="text" (keyup)="onKey($event)" placeholder="Username..." aria-label="Username.." aria-describedby="button-addon2">
+                <input class="form-control" type="text" (keyup)="onKey($event)" placeholder="GitHub Username..." aria-label="Username.." aria-describedby="button-addon2">
             </button>
             <div class="input-group-append" style="padding:0.5%;">
                 <button class="btn btn-primary" type="button" (click)="search($event.value)" [disabled]="noInput"> Search </button>
