@@ -18,7 +18,7 @@
         <h5 *ngIf="getFetchSuccess">  Repos by {{values}}: </h5>
     </div>
 
-    <app-repo></app-repo>
+    <app-repo *ngIf="getFetchSuccess" [passData]="myUser"></app-repo>
 
     <div class="container" *ngIf="NoUser && getFetchSuccess">
         <div class="card text-center">

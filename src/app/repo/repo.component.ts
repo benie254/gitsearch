@@ -15,7 +15,7 @@ export class RepoComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   ngOnChanges(changes: SimpleChanges){
