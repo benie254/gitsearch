@@ -11,5 +11,11 @@ import { User } from '../repo-class/repo';
 })
 export class ProfileRequestService {
 
+  fromURL= environment.fromURL;
+
   constructor(private http: HttpClient) { }
+
+  gitUser(userName: string): Observable<User[]>{
+    return this.http.get<User[]>(this.fromURL + '/users/' + userName);
+  }
 }
