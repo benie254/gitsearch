@@ -9,7 +9,15 @@ import { Repo } from '../repo-class/repo';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  values= '';
+  isLoading: boolean= false;
+  noInput: boolean= true;
+  getFetchSuccess: boolean= false;
+  NoUser: boolean= false;
+
+  myUser: Repo[];
+
+  constructor(private gitService: GitService) { }
 
   ngOnInit(): void {
   }
