@@ -53,4 +53,10 @@ export class UserComponent implements OnInit {
       };
     });
 
+    setTimeout(function(){
+      this.isLoading= false;
+      this.getFetchSuccess= true;
+    }.bind(this),1000);
+  }
+
 }
