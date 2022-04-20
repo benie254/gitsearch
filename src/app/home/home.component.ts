@@ -29,6 +29,19 @@ export class HomeComponent implements OnInit {
 
   constructor(private gitService: GitService,private profileRequest: ProfileRequestService) { }
 
+  gitRepos(event: any){
+    let promise= new Promise((resolve, reject) =>{
+      this.gitService.gitRepos(this.userName).toPromise().then(response =>{
+        this.repo= response;
+        resolve('');
+      },
+      err =>{
+        this.errorMessage= 'An error was encountered';
+      });
+    });
+    return promise;
+  }
+
   ngOnInit(): void {
   }
 
