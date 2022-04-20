@@ -1,1 +1,28 @@
-<p>user works!</p>
+<div class="container">
+
+    <div class="container" style="margin-top:2%;">
+        <div class="input-group mb-3 col-xs-12 col-md-4">
+            <button class="btn btn-primary" style="padding:0.5%;margin-left:37%;">
+                <input class="form-control" type="text" (keyup)="onKey($event)" placeholder="Username..." aria-label="Username.." aria-describedby="button-addon2">
+            </button>
+            <div class="input-group-append" style="padding:0.5%;">
+                <button class="btn btn-primary" type="button" (click)="search($event.value)" [disabled]="noInput"> Search </button>
+            </div>
+            <div class="spinner-border text-primary" role="status" *ngIf="isLoading">
+                <span class="sr-only"> Searching; please wait... </span>
+            </div>
+        </div>
+        <h5 *ngIf="getFetchSuccess">  Repos by {{values}}: </h5>
+    </div>
+
+    <div class="container" *ngIf="NoUser && getFetchSuccess">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title"> Error </h5>
+                <p class="card-text"> Sorry, we couldn't find any repos! </p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
