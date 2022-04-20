@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { GitService } from '../git-service/git.service';
+
 
 @Component({
   selector: 'app-repo',
@@ -10,7 +10,10 @@ import { GitService } from '../git-service/git.service';
 })
 export class RepoComponent implements OnInit {
 
-  constructor() { }
+  @Input() passData;
+  arrayData;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
