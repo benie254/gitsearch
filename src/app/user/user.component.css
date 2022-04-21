@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+input, .text {
+    font-family: 'Special Elite';
+    font-weight: bold;
+}
+
+button {
+    font-family: 'Luckiest Guy';
+}

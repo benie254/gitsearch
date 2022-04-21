@@ -27,7 +27,9 @@ export class HomeComponent implements OnInit {
 
   errorMessage;
 
-  constructor(private gitService: GitService,private profileRequest: ProfileRequestService) { }
+  constructor(private gitService: GitService,private profileRequest: ProfileRequestService) {
+    
+   }
 
   gitRepos(event: any){
     let promise= new Promise((resolve, reject) =>{

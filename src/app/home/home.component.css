@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 div p {
     text-align: center;
     margin-top: 5%;
+    font-family: 'Special Elite';
+    padding-bottom: 2.5%;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 #gify {

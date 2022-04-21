@@ -15,10 +15,10 @@
                 <span class="sr-only"> Searching; please wait... </span>
             </div>
         </div>
-        <h5 *ngIf="getFetchSuccess">  Repos by {{values}}: </h5>
+        <h5 *ngIf="getFetchSuccess" class="text">  Repos by {{values}}: </h5>
     </div>
 
-    <app-repo *ngIf="getFetchSuccess" [passData]="myUser"></app-repo>
+    <app-repo *ngIf="getFetchSuccess" [passData]="myRepo"></app-repo>
 
     <div class="container" *ngIf="NoUser && getFetchSuccess">
         <div class="card text-center">

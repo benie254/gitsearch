@@ -2,7 +2,6 @@
     <div class="row" style="margin-left: 15%;">
         <div class="col-md-4" style="margin: 0.5%;" *ngFor="let item of arrayData">
             <div class="card" [ngClass]="{ 'bg-warning': item.form == true, 'bg-white': item.form !== true }">   
-                <!-- <img src="{{ GitService.item.avatar_url }}" width="130" class="avatar mb-2"> -->
                 
                 <div class="card-body">
                     <a href="{{item.html_url}}" target="_blank"> 

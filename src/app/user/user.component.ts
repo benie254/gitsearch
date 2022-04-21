@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import { GitService } from '../git-service/git.service';
+import { ProfileRequestService } from '../profile-request-service/profile-request.service';
 
 import { Repo } from '../repo-class/repo';
+import { User } from '../user-class/user';
 
 @Component({
   selector: 'app-user',
@@ -17,9 +19,11 @@ export class UserComponent implements OnInit {
   getFetchSuccess: boolean= false;
   NoUser: boolean= false;
 
-  myUser: Repo[];
+  myRepo: Repo[];
+  myUser: User[];
 
-  constructor(private gitService: GitService) { }
+
+  constructor(private gitService: GitService,private profileRequest: ProfileRequestService) { }
 
   ngOnInit(): void {
   }
@@ -47,18 +51,16 @@ export class UserComponent implements OnInit {
 
   fetchUser(UserName): void{
     this.gitService.gitRepos(UserName).subscribe( data =>{
-      this.myUser= data;
-      if (this.myUser == undefined || this.myUser && this.myUser.length == 0){
+      this.myRepo= data;
+      if (this.myRepo == undefined || this.myRepo && this.myRepo.length == 0){
         this.NoUser= true;
       } else {
         this.NoUser= false;
       };
     });
-
     setTimeout(function(){
       this.isLoading= false;
       this.getFetchSuccess= true;
     }.bind(this),1000);
   }
-
 }
