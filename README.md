@@ -61,7 +61,7 @@ No known bugs. Please report any issues or encountered bugs!
 * Angular- app structure, interactivity, data collection. binding & manipulation.
 * HTML- page content.
 * CSS & Bootstrap- page styling & animation.  
-* 
+
 ## Other Resources Used 
 
 * SiteIcon made with [Favicon](https://favicon.io). 
