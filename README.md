@@ -3,7 +3,6 @@
 A Github search project generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
 
 # GitSearcHub
-
 #### This repo creates an app for searching Github users and repositories.
 ## Author
 [Benson Langat](https://github.com/benie254)
