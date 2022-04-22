@@ -14,7 +14,9 @@ The app allows users to search for any Github profile. Upon entering a valid Git
 
 ## Screenshot
 
-<img src="https://user-images.githubusercontent.com/99865051/164605247-c92a57f7-dab8-4f03-affd-4fa7d3a79b3e.png" >
+<img src="https://user-images.githubusercontent.com/99865051/164606214-f5f51d61-7e1f-4633-ba17-cc05338b076e.png" >
+***
+<img src="https://user-images.githubusercontent.com/99865051/164606275-e5e8f09e-a03e-40e6-baae-67ea62f583f5.png">
 
 ## Live Page 
 
